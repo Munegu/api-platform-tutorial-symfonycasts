@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09929ff0-d670-4b15-a0d7-aed12961f7f2" name="Default Changelist" comment="" />
+    <list default="true" id="09929ff0-d670-4b15-a0d7-aed12961f7f2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/start.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/start.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/CheeseListing.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/CheeseListing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -94,20 +107,26 @@
       <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jj4VW7w6mEO7QDCh06lDBdx35a" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -119,11 +138,25 @@
       <option name="presentableId" value="Default" />
       <updated>1604304192579</updated>
       <workItem from="1604304194163" duration="4128000" />
+      <workItem from="1604322205686" duration="5594000" />
     </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1604322238625</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604322238625</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="514" y="337" key="#Composer" timestamp="1604304200124">
@@ -134,5 +167,21 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/1440.0.1360.768@0.0.1440.900" timestamp="1604305409056" />
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1604324181979">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.0.1360.768@0.0.1440.900" timestamp="1604324181979" />
+    <state x="160" y="53" key="CommitChangelistDialog2" timestamp="1604322238177">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="160" y="53" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1360.768@0.0.1440.900" timestamp="1604322238177" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1604331671836">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900/1440.0.1360.768@0.0.1440.900" timestamp="1604331671836" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604322243406">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1360.768@0.0.1440.900" timestamp="1604322243406" />
   </component>
 </project>
