@@ -14,18 +14,22 @@ use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Serializer\Annotation\SerializedName;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ApiResource(
  *     collectionOperations={"get", "post"},
  *     itemOperations={
- *     "get",
+ *     "get"={
+ *           "normalization_context"={"groups"={"cheese_listing:read", "cheese_listing:item:get"}}
+ *     },
  *     "put"},
  *     normalizationContext={"groups"={"cheese_listing:read"}},
  *     denormalizationContext={"groups"={"cheese_listing:write"}},
  *     shortName="cheeses",
  *     attributes={
- *          "pagination_items_per_page"=10
+ *          "pagination_items_per_page"=10,
+ *          "formats"={"jsonld", "json", "html", "jsonhal", "csv"={"text/csv"}}
  *     }
  * )
  * @ORM\Entity(repositoryClass=CheeseListingRepository::class)
@@ -45,13 +49,20 @@ class CheeseListing
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups ({"cheese_listing:read", "cheese_listing:write"})
+     * @Groups ({"cheese_listing:read", "cheese_listing:write", "user:read"})
+     * @Assert\NotBlank ()
+     * @Assert\Length(
+     *     min=2,
+     *     max=50,
+     *     maxMessage="Describe your cheese in 50 chars or less"
+     * )
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
      * @Groups ({"cheese_listing:read"})
+     * @Assert\NotBlank()
      */
     private $description;
 
@@ -59,7 +70,8 @@ class CheeseListing
      * The price of this delicious cheese, in cents
      *
      * @ORM\Column(type="integer")
-     * @Groups ({"cheese_listing:read", "cheese_listing:write"})
+     * @Groups ({"cheese_listing:read", "cheese_listing:write", "user:read"})
+     * @Assert\NotBlank()
      */
     private $price;
 
@@ -72,6 +84,13 @@ class CheeseListing
      * @ORM\Column(type="boolean")
      */
     private $isPublished = false;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="cheeseListings")
+     * @ORM\JoinColumn(nullable=false)
+     * @Groups ({"cheese_listing:read", "cheese_listing:write"})
+     */
+    private $owner;
 
     /**
      * CheeseListing constructor.
@@ -171,6 +190,18 @@ class CheeseListing
     public function setIsPublished(bool $isPublished): self
     {
         $this->isPublished = $isPublished;
+
+        return $this;
+    }
+
+    public function getOwner(): ?User
+    {
+        return $this->owner;
+    }
+
+    public function setOwner(?User $owner): self
+    {
+        $this->owner = $owner;
 
         return $this;
     }
